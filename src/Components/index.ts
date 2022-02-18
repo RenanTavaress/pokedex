@@ -10,9 +10,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    width: 1080px;
-    height: 820px;
+    width: 100%;
+    height: 100%;
     background: #C6ECED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 `;
