@@ -50,13 +50,67 @@ const Form = styled.form`
         }
     }
   }
-
-
-
-
-
 `;
 
+const Divsao = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 45px;
+  position: relative;
+  top: 55px;
+
+`
 
 
-export default Form;
+const Cards = styled.div`
+  width: 181px;
+  height: 253px;
+  background-color: #48D0B0;
+  border-radius: 25px;
+
+
+  .div-name {
+    position: relative;
+    top: 22px;
+
+    text-align: center;
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #FFFFFF;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      color: rgba(0, 0, 0, 0.42);
+    }
+  }
+  .div-image {
+    position: relative;
+    bottom: -41px;
+    left: 14px;
+    width: 151px;
+    height: 151px;
+    background-color: #91e3d0;
+    border-radius: 50%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 122px;
+      height: 122px;
+    }
+  }
+
+`
+export {Form, Cards, Divsao}
