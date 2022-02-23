@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Form = styled.form`
-  width: auto;
+  width: 1000px;
   height: auto;
 
   display: flex;
@@ -53,14 +53,15 @@ const Form = styled.form`
 `;
 
 const Divsao = styled.div`
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
   gap: 45px;
-  position: relative;
-  top: 55px;
+  position: absolute;
+  top: 230px;
 
 `
 

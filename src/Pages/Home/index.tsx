@@ -41,20 +41,17 @@ const Home: React.FC = () => {
         </section>
       </Form>
       <Divsao>
-      {pokemonRepos.map(pokes => (
-        <Cards key={pokes.id}>
-          <div className="div-name">
-            <p>{pokes.name}</p>
-            <span>{`#${pokes.id}`}</span>
-          </div>
-          <div className="div-image">
-            <img
-              src={pokes.image}
-              alt="Imagem do pokemon"
-            />
-          </div>
-        </Cards>
-      ))}
+        {pokemonRepos.map((pokes) => (
+          <Cards key={pokes.id}>
+            <div className="div-name">
+              <p>{pokes.name}</p>
+              <span>{`#00${pokes.id}`}</span>
+            </div>
+            <div className="div-image">
+              <img src={pokes.image} alt="Imagem do pokemon" />
+            </div>
+          </Cards>
+        ))}
       </Divsao>
     </>
   );
