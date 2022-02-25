@@ -1,46 +1,16 @@
-# Getting Started with Create React App
+Para esse desafio técnico seguiremos evoluindo a aplicação iniciada no módulo anterior, e para isso, baseado no layout proposto desenvolva uma aplicação em React que irá listar os Pokémons consultando as informações de uma API e ao clicar sobre algum card será direcionado para a página de detalhes, onde deverá ser feita uma nova chamada para obter as informações do Pokémon.
+Para o desenvolvimento, atente-se aos seguintes pontos:
+•	A aplicação deverá utilizar navegação entre rotas, possuindo duas rotas (Home e Detalhes)
+•	O nome do Pokémon deve ser passado como parâmetro da url para a página de detalhes
+•	Cada Pokémon pode conter um ou mais tipo. Para definir a cor do card, utilize sempre o primeiro tipo da lista. As cores definidas para cada tipo estão no protótipo abaixo
+•	Para a exibição das habilidades, leve em consideração a barra completa como 100, e o valor proveniente da API como o valor a ser preenchido na barra. Ex: Para uma habilidade que ele possua valor de 45, o tamanho da barra preenchida deve ser de 45% do tamanho total da barra.
+•	Para o campo de busca da página inicial, iremos fazer um filtro dentro da própria lista já carregada, ou seja, ao digitar o nome de algum Pokémon, você deverá fazer um filtro na lista de Pokémons e exibir apenas os itens que correspondem ao texto pesquisado. Caso não seja encontrado nenhum item, exiba uma mensagem simples informando que nenhum Pokémon foi encontrado.
+•	Para estilização você poderá escolher se utilizará o SASS ou o Styled Components. Caso escolha utilizar o sass em seu projeto React, será necessário realizar uma pequena configuração no projeto. Mais informações nesse link → https://backefront.com.br/como-usar-scss-react/
+•	Para haver uma melhor padronização de estilo, aconselho que utilizem o reset de css em seus projetos: https://meyerweb.com/eric/tools/css/reset/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+API
+Método	Endpoint	Descrição
+GET	https://pokedex-api-three.vercel.app/api/pokemons
+Responsável por listar todos os Pokémons
+GET	https://pokedex-api-three.vercel.app/api/pokemons/bulbasaur
+Responsável por trazer os detalhes de um Pokémon

@@ -1,7 +1,8 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import api from "../../services/api";
-import { Form, Cards, Divsao } from "./styles";
+import { Form, SectionCards, Main } from "./styles";
+import Card from '../../Components/Card'
 
 interface PokemonRepos {
   id: number;
@@ -24,7 +25,7 @@ const Home: React.FC = () => {
   }
 
   return (
-    <>
+    <Main>
       <Form onSubmit={handleSubimit}>
         <div className="logo">
           <img src={Logo} alt="" />
@@ -40,20 +41,12 @@ const Home: React.FC = () => {
           </button>
         </section>
       </Form>
-      <Divsao>
+      <SectionCards>
         {pokemonRepos.map((pokes) => (
-          <Cards key={pokes.id}>
-            <div className="div-name">
-              <p>{pokes.name}</p>
-              <span>{`#00${pokes.id}`}</span>
-            </div>
-            <div className="div-image">
-              <img src={pokes.image} alt="Imagem do pokemon" />
-            </div>
-          </Cards>
+          <Card key={pokes.id} {...pokes}/>
         ))}
-      </Divsao>
-    </>
+      </SectionCards>
+    </Main>
   );
 };
 
