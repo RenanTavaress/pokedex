@@ -1,10 +1,12 @@
 import { StyleCard } from "./styles"
 
-// interface PokesProps {
-//   pokes: string;
-// }
+interface PokesProps {
+  name: string;
+  id: number;
+  image: string;
+}
 
-export default function Card({id, name, image}: any) {
+export default function Card({id, name, image}: PokesProps) {
   return(
     <StyleCard>
       <div className="div-name">
@@ -15,6 +17,5 @@ export default function Card({id, name, image}: any) {
         <img src={image} alt="Imagem do pokemon" />
       </div>
     </StyleCard>
-
   )
 }
