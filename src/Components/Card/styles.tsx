@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
 const StyleCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 181px;
   height: 253px;
   background-color: #48d0b0;
   border-radius: 25px;
 
   .div-name {
-    position: relative;
-    top: 22px;
-
+    margin-top: -10px;
     text-align: center;
+    margin-bottom: 1.75rem;
 
     p {
       font-weight: 500;
@@ -27,9 +30,6 @@ const StyleCard = styled.div`
     }
   }
   .div-image {
-    position: relative;
-    bottom: -41px;
-    left: 14px;
     width: 151px;
     height: 151px;
     background-color: #91e3d0;

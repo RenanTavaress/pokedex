@@ -11,7 +11,7 @@ export default function Card({id, name, image}: PokesProps) {
     <StyleCard>
       <div className="div-name">
         <p>{name}</p>
-          <span>{`#00${id}`}</span>
+        <span>{`#00${id}`}</span>
       </div>
       <div className="div-image">
         <img src={image} alt="Imagem do pokemon" />

@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import api from "../../services/api";
 import { Form, SectionCards, Main } from "./styles";
-import Card from '../../Components/Card'
+import Card from "../../Components/Card";
 
 interface PokemonRepos {
   id: number;
@@ -26,24 +26,22 @@ const Home: React.FC = () => {
 
   return (
     <Main>
+      <div className="logo">
+        <img src={Logo} alt="" />
+      </div>
       <Form onSubmit={handleSubimit}>
-        <div className="logo">
-          <img src={Logo} alt="" />
-        </div>
-        <section>
-          <input
-            placeholder="Digite o nome do pokemon"
-            value={pokemons}
-            onChange={(event) => setPokemons(event.target.value)}
-          />
-          <button type="submit">
-            <span>Buscar</span>
-          </button>
-        </section>
+        <input
+          placeholder="Digite o nome do pokemon"
+          value={pokemons}
+          onChange={(event) => setPokemons(event.target.value)}
+        />
+        <button type="submit">
+          <span>Buscar</span>
+        </button>
       </Form>
       <SectionCards>
         {pokemonRepos.map((pokes) => (
-          <Card key={pokes.id} {...pokes}/>
+          <Card key={pokes.id} {...pokes} />
         ))}
       </SectionCards>
     </Main>
