@@ -9,12 +9,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  html, body, #root {
+  html, body {
     width: 100%;
     height: 100%;
     background: #C6ECED;
-    display: flex;
-    justify-content: center;
   }
 
 `;
