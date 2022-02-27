@@ -1,8 +1,9 @@
-import React, { FormEvent, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/Logo.svg";
-import api from "../../services/api";
-import { Form, SectionCards, Main } from "./styles";
+
+import { SectionCards, Main } from "./styles";
 import Card from "../../Components/Card";
+import Forms from "../../Components/Form/index";
 
 interface PokemonRepos {
   id: number;
@@ -11,34 +12,14 @@ interface PokemonRepos {
 }
 
 const Home: React.FC = () => {
-  const [pokemons, setPokemons] = useState("");
   const [pokemonRepos, setPokemonRepos] = useState<PokemonRepos[]>([]);
-
-  async function handleSubimit(
-    event: FormEvent<HTMLFormElement>
-  ): Promise<void> {
-    event.preventDefault();
-    api
-      .get<PokemonRepos>(`pokemons/${pokemons}`)
-      .then((response) => setPokemonRepos([...pokemonRepos, response.data]));
-    setPokemons("");
-  }
 
   return (
     <Main>
       <div className="logo">
         <img src={Logo} alt="" />
       </div>
-      <Form onSubmit={handleSubimit}>
-        <input
-          placeholder="Digite o nome do pokemon"
-          value={pokemons}
-          onChange={(event) => setPokemons(event.target.value)}
-        />
-        <button type="submit">
-          <span>Buscar</span>
-        </button>
-      </Form>
+      <Forms pokemonRepos={pokemonRepos} setPokemonRepos={setPokemonRepos} />
       <SectionCards>
         {pokemonRepos.map((pokes) => (
           <Card key={pokes.id} {...pokes} />

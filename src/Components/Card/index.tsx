@@ -1,4 +1,4 @@
-import { StyleCard } from "./styles"
+import { StyleCard } from "./styles";
 
 interface PokesProps {
   name: string;
@@ -6,8 +6,8 @@ interface PokesProps {
   image: string;
 }
 
-export default function Card({id, name, image}: PokesProps) {
-  return(
+export default function Card({ id, name, image }: PokesProps) {
+  return (
     <StyleCard>
       <div className="div-name">
         <p>{name}</p>
@@ -17,5 +17,5 @@ export default function Card({id, name, image}: PokesProps) {
         <img src={image} alt="Imagem do pokemon" />
       </div>
     </StyleCard>
-  )
+  );
 }

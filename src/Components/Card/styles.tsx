@@ -44,7 +44,6 @@ const StyleCard = styled.div`
       height: 122px;
     }
   }
+`;
 
-`
-
-export {StyleCard}
+export { StyleCard };
