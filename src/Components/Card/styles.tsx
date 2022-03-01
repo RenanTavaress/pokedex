@@ -9,6 +9,7 @@ const StyleCard = styled.div`
   height: 253px;
   background-color: #48d0b0;
   border-radius: 25px;
+  background-color: ${props => props.color} ;
 
   .div-name {
     margin-top: -10px;

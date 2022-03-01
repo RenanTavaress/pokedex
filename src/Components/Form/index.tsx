@@ -6,11 +6,13 @@ interface PokemonRepos {
   id: number;
   name: string;
   image: string;
+  types: Array<string>;
 }
 
 interface PropsPokemonRepos {
   pokemonRepos: PokemonRepos[];
-  setPokemonRepos: React.Dispatch<SetStateAction<PokemonRepos[]>>;
+  //setPokemonRepos: React.Dispatch<SetStateAction<PokemonRepos[]>>;
+  setPokemonRepos: (val: PokemonRepos[]) => void;
 }
 
 export default function Forms({

@@ -9,6 +9,7 @@ interface PokemonRepos {
   id: number;
   name: string;
   image: string;
+  types: Array<string>;
 }
 
 const Home: React.FC = () => {
