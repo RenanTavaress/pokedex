@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/Logo.svg";
-
-import { SectionCards, Main } from "./styles";
+import { BsHeartFill } from "react-icons/bs"
+import { SectionCards, Main,Header } from "./styles";
 import Card from "../../Components/Card";
 import Forms from "../../Components/Form/index";
 
@@ -17,9 +17,15 @@ const Home: React.FC = () => {
 
   return (
     <Main>
-      <div className="logo">
-        <img src={Logo} alt="" />
-      </div>
+      <Header>
+        <div>
+          <img src={Logo} alt="" />
+        </div>
+        <div>
+          <BsHeartFill/>
+          <a href="#">  Meus Favoritos</a>
+        </div>
+      </Header>
       <Forms pokemonRepos={pokemonRepos} setPokemonRepos={setPokemonRepos} />
       <SectionCards>
         {pokemonRepos.map((pokes) => (

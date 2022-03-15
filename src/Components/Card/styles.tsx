@@ -15,25 +15,38 @@ const StyleCard = styled.div`
     margin-top: -10px;
     text-align: center;
     margin-bottom: 1.75rem;
+    width: 100%;
 
-    p {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 21px;
-      color: #ffffff;
+    .name-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #ffffff;
+        margin-left: 39px;
+      }
+      img {
+        margin-left: 15px;
+      }
+
     }
-
     span {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 15px;
       line-height: 18px;
       color: rgba(0, 0, 0, 0.42);
     }
   }
-  .div-image {
+`;
+
+const StyledDivBackground = styled.div`
     width: 151px;
     height: 151px;
-    background-color: #91e3d0;
+    background-color: ${props => props.color} ;
     border-radius: 50%;
 
     display: flex;
@@ -44,7 +57,7 @@ const StyleCard = styled.div`
       width: 122px;
       height: 122px;
     }
-  }
-`;
 
-export { StyleCard };
+`
+
+export { StyleCard, StyledDivBackground };

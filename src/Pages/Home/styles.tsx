@@ -23,4 +23,24 @@ const SectionCards = styled.section`
   gap: 45px;
 `;
 
-export { SectionCards, Main };
+
+const Header = styled.header`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    color: #3763ad;
+    a:visited {
+    color: #3763ad;
+  }
+
+  }
+`
+
+export { SectionCards, Main, Header};

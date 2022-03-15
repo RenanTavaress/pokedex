@@ -27,7 +27,7 @@ export default function Forms({
     event.preventDefault();
     api
       .get<PokemonRepos>(`pokemons/${pokemons}`)
-      .then((response) => setPokemonRepos([...pokemonRepos, response.data]));
+      .then((response) => setPokemonRepos([...pokemonRepos, response.data]))
     setPokemons("");
   }
 
