@@ -35,7 +35,7 @@ export default function Forms({
     <Form onSubmit={handleSubimit}>
       <input
         placeholder="Digite o nome do pokemon"
-        value={pokemons}
+        value={pokemons.toLowerCase()}
         onChange={(event) => setPokemons(event.target.value)}
         required
       />
