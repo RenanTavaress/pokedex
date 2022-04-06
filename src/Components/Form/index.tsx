@@ -26,7 +26,7 @@ export default function Forms({
   ): Promise<void> {
     event.preventDefault();
     api
-      .get<PokemonRepos>(`pokemons/${pokemons}`)
+      .get<PokemonRepos>(`pokemons/${pokemons.toLowerCase()}`)
       .then((response) => setPokemonRepos([...pokemonRepos, response.data]))
     setPokemons("");
   }
@@ -35,7 +35,7 @@ export default function Forms({
     <Form onSubmit={handleSubimit}>
       <input
         placeholder="Digite o nome do pokemon"
-        value={pokemons.toLowerCase()}
+        value={pokemons}
         onChange={(event) => setPokemons(event.target.value)}
         required
       />
