@@ -26,7 +26,7 @@ export default function Forms({
   ): Promise<void> {
     event.preventDefault();
     api
-      .get<PokemonRepos>(`pokemons/${pokemons}`)
+      .get<PokemonRepos>(`pokemons/${pokemons.toLowerCase()}`)
       .then((response) => setPokemonRepos([...pokemonRepos, response.data]))
     setPokemons("");
   }
